@@ -1,1 +1,42 @@
 @use "../abstracts/" as *;
+
+header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: white;
+
+ @include min-width(600px) {
+  padding: 0 2.5rem;
+ }
+}
+.darkmode {
+ background-color: black;
+ color: white;
+}
+.nav-logo {
+ cursor: pointer;
+}
+nav {
+ @include max-width(600px) {
+  display: none;
+ }
+}
+.nav-menu {
+ @include min-width(600px) {
+  display: none;
+ }
+}
+ul {
+ display: flex;
+ list-style-type: none;
+ gap: 3rem;
+}
+a {
+ text-decoration: none;
+
+ cursor: pointer;
+}
+.active {
+ color: red;
+}
