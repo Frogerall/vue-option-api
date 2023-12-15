@@ -1,6 +1,7 @@
-app.component("header-list", {
+app.component("header-nav", {
  template: /*html*/ `
-    <header :class="{darkmode: toggleDarkMode}">
+    <header 
+    :class="navbarClass">
       <div class="nav-logo">Nav Logo</div>
       <div class="nav-menu">Menu</div>
       <nav>
@@ -39,5 +40,11 @@ app.component("header-list", {
    ],
   };
  },
- method: {},
+ computed: {
+  navbarClass() {
+   return {
+    darkmode: this.toggleDarkMode,
+   };
+  },
+ },
 });
